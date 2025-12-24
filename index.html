@@ -4,50 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ريشيو للاستشارات | Ratio Consulting</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    
     <style>
-        :root { --gold: #d4a373; --black: #1a1a1a; }
-        body { font-family: 'Tajawal', sans-serif; margin: 0; background-color: #fdfdfd; color: var(--black); line-height: 1.8; text-align: center; }
-        header { background: #fff; padding: 40px 20px; border-bottom: 1px solid #eee; }
-        .logo { max-width: 250px; height: auto; display: block; margin: 0 auto 10px; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        .section-box { background: #fff; padding: 30px; margin: 20px 0; border: 1px solid #eee; text-align: right; }
-        .policy-box { background: #f9f9f9; padding: 20px; border-right: 5px solid var(--gold); margin: 20px 0; text-align: right; font-size: 0.9rem; }
-        .booking-container { min-height: 800px; margin-top: 30px; border: 1px solid #eee; }
-        footer { padding: 40px; font-size: 0.8rem; color: #888; border-top: 1px solid #eee; }
-        .lang-en { direction: ltr; text-align: left; display: block; color: #666; margin-top: 5px; }
+        :root {
+            --gold: #d4a373; /* لون ذهبي مقارب للشعار */
+            --black: #1a1a1a;
+            --dark-gray: #111111;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcfcfc;
+            color: var(--black);
+            line-height: 1.8;
+        }
+
+        /* الهيدر بخلفية داكنة لتناسب فخامة الشعار */
+        header {
+            background: var(--dark-gray);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .logo {
+            max-width: 300px; /* مقاس مناسب لبروز تفاصيل الشعار */
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* قسم من نحن */
+        .section-box {
+            background: var(--white);
+            padding: 40px;
+            border: 1px solid #eee;
+            margin-bottom: 30px;
+            text-align: right;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .section-box h2 {
+            color: var(--black);
+            border-right: 5px solid var(--gold);
+            padding-right: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* سياسة الحجز */
+        .policy-box {
+            background: #fff9f2; /* خلفية كريمية خفيفة */
+            padding: 25px;
+            border: 1px solid #ffe8cc;
+            border-right: 5px solid var(--gold);
+            margin-bottom: 30px;
+            text-align: right;
+            font-size: 0.95rem;
+            border-radius: 4px;
+        }
+
+        .lang-en {
+            direction: ltr;
+            text-align: left;
+            display: block;
+            margin-top: 5px;
+            color: #777;
+            font-family: sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* إطار التقويم */
+        .booking-container {
+            border: 1px solid #eee;
+            background: var(--white);
+            min-height: 800px;
+            margin-bottom: 50px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* الفوتر */
+        footer {
+            background: var(--dark-gray);
+            padding: 60px 20px;
+            color: #ccc;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            margin-top: 25px;
+            color: #666;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="logo.jpg" alt="Ratio Consulting" class="logo">
-        <p style="color: #555; font-weight: 500;">مستشارون سعوديون خبرة في مؤشرات السوق المحلي والدولي</p>
+        <img src="logo.png" alt="Ratio Consulting" class="logo">
+        <p>مستشارون سعوديون خبرة في مؤشرات السوق المحلي والدولي</p>
     </header>
 
     <div class="container">
+        
         <section class="section-box">
-            <h2>من نحن</h2>
-            <p>نحن في <strong>ريشيو (Ratio)</strong> شريككم الاستراتيجي لتطوير الأعمال، نقدم استشارات إدارية وتسويقية متخصصة مبنية على تحليل دقيق لبيانات السوق المحلي والدولي.</p>
+            <h2>عن ريشيو (Ratio)</h2>
+            <p>نحن شريككم الاستراتيجي لتطوير الأعمال، نعتمد على تحليلات دقيقة لمؤشرات الأسواق لتقديم استشارات إدارية وتسويقية تضمن لعملائنا تحقيق الريادة والنمو المستدام في بيئة تنافسية متغيرة.</p>
         </section>
 
         <div class="policy-box">
             <h3>سياسة الحجز والدفع | Booking Policy</h3>
-            <p>• الرسوم: تختلف الرسوم بناءً على نوع الجلسة المختارة (غير مستردة).</p>
+            <strong>• الرسوم:</strong> تختلف رسوم الاستشارة بناءً على نوع الجلسة المختار (الرسوم غير مستردة).
             <span class="lang-en">• Fees vary by session type (Non-refundable).</span>
-            <p>• إعادة الجدولة: متاحة قبل الموعد بـ 24 ساعة.</p>
+            <br>
+            <strong>• إعادة الجدولة:</strong> يمكن تغيير موعد الجلسة قبل 24 ساعة من الموعد المحدد.
             <span class="lang-en">• Rescheduling: Available up to 24 hours in advance.</span>
         </div>
 
         <div class="booking-container">
-            <div class="calendly-inline-widget" data-url="https://calendly.com/admin-highcharter?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:750px;"></div>
+            <div class="calendly-inline-widget" 
+                 data-url="https://calendly.com/admin-highcharter?hide_landing_page_details=1&hide_gdpr_banner=1" 
+                 style="min-width:320px;height:750px;">
+            </div>
         </div>
+
     </div>
 
     <footer>
-        <p>للتواصل: <a href="mailto:admin@highcharter.com" style="color:var(--gold); font-weight:bold;">admin@highcharter.com</a></p>
-        <p>&copy; 2025 ريشيو للاستشارات. جميع الحقوق محفوظة.</p>
+        <p>للتواصل والاستفسارات الإدارية:</p>
+        <a href="mailto:admin@highcharter.com">admin@highcharter.com</a>
+        <div class="copyright">
+            <p>&copy; 2025 ريشيو للاستشارات الإدارية والتسويقية وحلول الأعمال. جميع الحقوق محفوظة.</p>
+        </div>
     </footer>
 
 </body>
