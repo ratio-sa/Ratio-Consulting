@@ -3,244 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ريشيو للاستشارات الإدارية والتسويقية</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <title>ريشيو للاستشارات | Ratio Consulting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     
-    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     
     <style>
-        :root {
-            --primary-color: #039BE5; /* اللون المعتمد في زر التقويم */
-            --secondary-color: #1a2a3a;
-            --text-color: #333;
-            --bg-light: #f9fbfd;
+        body { font-family: 'Tajawal', sans-serif; margin: 0; background-color: #fdfdfd; color: #1a1a1a; line-height: 1.8; text-align: center; }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        header { padding: 40px; background: #fff; border-bottom: 1px solid #eee; }
+        .logo { max-width: 220px; height: auto; }
+        .section-box { background: #fff; padding: 30px; margin: 20px 0; border: 1px solid #eee; text-align: right; }
+        
+        .policy-container { 
+            background: #f9f9f9; 
+            padding: 20px; 
+            border-right: 4px solid #d4a373; 
+            margin: 30px 0; 
+            text-align: right;
+            font-size: 0.9rem;
         }
-
-        body {
-            font-family: 'Tajawal', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-light);
-            color: var(--text-color);
-            line-height: 1.8;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* الهيدر */
-        header {
-            background: #fff;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            margin: 0;
-        }
-
-        .tagline {
-            font-size: 1.1rem;
-            color: var(--secondary-color);
-            margin-top: 5px;
-        }
-
-        /* قسم من نحن */
-        .about-section {
-            padding: 80px 0;
-            text-align: center;
-            background: white;
-            margin-top: 20px;
-        }
-
-        .about-section h2 {
-            font-size: 2rem;
-            color: var(--secondary-color);
-            margin-bottom: 30px;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.2rem;
-            color: #555;
-        }
-
-        /* قسم الخدمات */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 60px 0;
-        }
-
-        .service-card {
-            background: #fff;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-            border-bottom: 4px solid var(--primary-color);
-        }
-
-        .service-card:hover { transform: translateY(-10px); }
-
-        /* قسم آراء العملاء */
-        .testimonials {
-            background: var(--secondary-color);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .testimonial-item {
-            background: rgba(255,255,255,0.1);
-            padding: 30px;
-            border-radius: 10px;
-            font-style: italic;
-        }
-
-        /* الحجز */
-        .booking-cta {
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .booking-card {
-            background: white;
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        /* الفوتر */
-        footer {
-            background: #fff;
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid #eee;
-        }
-
-        .contact-email {
-            color: var(--primary-color);
-            font-weight: bold;
-            text-decoration: none;
-            display: block;
-            margin-top: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .logo { font-size: 1.8rem; }
-            .about-content { font-size: 1.1rem; }
-        }
+        
+        .booking-frame { margin: 40px 0; border: 1px solid #1a1a1a; }
+        
+        footer { padding: 40px; font-size: 0.8rem; color: #888; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <h1 class="logo">ريشيو - Ratio</h1>
-            <p class="tagline">للاستشارات الإدارية والتسويقية وحلول الأعمال</p>
-        </div>
+        <img src="logo.png" alt="Ratio Logo" class="logo">
+        <p>مستشارون سعوديون خبرة في مؤشرات السوق المحلي والدولي</p>
     </header>
 
-    <main class="container">
-        
-        <section class="about-section">
+    <div class="container">
+        <section class="section-box">
             <h2>من نحن</h2>
-            <div class="about-content">
-                <p>
-                    نحن <strong>مستشارون سعوديون</strong> متخصصون، نمتلك خبرة عميقة في دراسة وتحليل <strong>مؤشرات السوق المحلي والدولي</strong>. 
-                    نعمل في "ريشيو" كشركاء نجاح لعملائنا عبر تقديم حلول أعمال متكاملة تساعد المنشآت على النمو والاستدامة في بيئة اقتصادية متغيرة.
-                </p>
-            </div>
+            <p>نحن في <strong>ريشيو (Ratio)</strong> نقدم حلولاً استشارية مبنية على تحليل دقيق لمؤشرات السوق، لتمكين قطاع الأعمال من تحقيق النمو المستدام.</p>
         </section>
 
-        <section class="services-grid">
-            <div class="service-card">
-                <h3>الاستشارات الإدارية</h3>
-                <p>تطوير الهياكل التنظيمية ورفع كفاءة سلاسل الإمداد والعمليات.</p>
-            </div>
-            <div class="service-card">
-                <h3>الاستشارات التسويقية</h3>
-                <p>بناء استراتيجيات التسويق الرقمي والهوية المؤسسية القوية.</p>
-            </div>
-            <div class="service-card">
-                <h3>حلول الأعمال</h3>
-                <p>تحويل التحديات إلى فرص من خلال دراسات الجدوى والتحليل المالي.</p>
-            </div>
-        </section>
-
-        <section class="booking-cta">
-            <div class="booking-card">
-                <h2>ابدأ رحلة النجاح اليوم</h2>
-                <p>احجز جلستك الاستشارية مباشرة مع خبراء ريشيو</p>
-                
-                <div style="margin-top: 30px;">
-                    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-                    <script>
-                    (function() {
-                      var target = document.currentScript;
-                      window.addEventListener('load', function() {
-                        calendar.schedulingButton.load({
-                          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ05N5c1JVkTrQfDx0kyaAIwd3mVr1hQUOAZUMn4NGhsz22sJPhA-cH87f2UzCD9UlUwQYLZDaUJ?gv=true',
-                          color: '#039BE5',
-                          label: 'حجز موعد مع مستشار',
-                          target,
-                        });
-                      });
-                    })();
-                    </script>
-                </div>
-                </div>
-        </section>
-
-    </main>
-
-    <section class="testimonials">
-        <div class="container">
-            <h2>قالوا عن ريشيو</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-item">
-                    <p>"احترافية عالية في تحليل السوق المحلي ساعدتنا على التوسع بشكل مدروس."</p>
-                    <strong>- شركة توريد لوجستي</strong>
-                </div>
-                <div class="testimonial-item">
-                    <p>"أفضل حلول إدارية واجهناها، الالتزام والدقة هي عنوان فريق ريشيو."</p>
-                    <strong>- مؤسسة تقنية رائدة</strong>
-                </div>
-                <div class="testimonial-item">
-                    <p>"خبرة المستشارين السعوديين في ريشيو صنعت الفارق في نتائجنا التسويقية."</p>
-                    <strong>- مجموعة تجارية</strong>
-                </div>
-            </div>
+        <div class="policy-container">
+            <h3>سياسة الحجز والدفع | Booking Policy</h3>
+            <p>• رسوم التأكيد: <strong>50 ريال</strong> غير مستردة. / Confirmation Fee: <strong>SAR 50</strong> (Non-refundable).</p>
+            <p>• إعادة الجدولة: قبل 24 ساعة. / Rescheduling: 24 hours in advance.</p>
         </div>
-    </section>
+
+        <section class="booking-frame">
+            <div class="calendly-inline-widget" data-url="https://calendly.com/admin-highcharter/new-meeting?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:750px;"></div>
+        </section>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>للتواصل المباشر والاستفسارات:</p>
-            <a href="mailto:admin@highcharter.com" class="contact-email">admin@highcharter.com</a>
-            <p style="margin-top: 20px; font-size: 0.8rem; color: #999;">&copy; 2024 ريشيو للاستشارات. جميع الحقوق محفوظة.</p>
-        </div>
+        <p>للتواصل: admin@highcharter.com</p>
+        <p>&copy; 2025 ريشيو للاستشارات الإدارية والتسويقية. جميع الحقوق محفوظة.</p>
     </footer>
 
 </body>
