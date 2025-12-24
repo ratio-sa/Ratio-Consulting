@@ -6,15 +6,14 @@
     <title>ريشيو للاستشارات | Ratio Consulting</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-    
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     
     <style>
         :root {
-            --gold: #d4a373; /* لون ذهبي مقارب للشعار */
-            --black: #1a1a1a;
-            --dark-gray: #111111;
+            --brand-blue: #0a0e45; 
+            --brand-cyan: #4ce9ff; 
             --white: #ffffff;
+            --bg-light: #f4f7f9;
         }
 
         * { box-sizing: border-box; }
@@ -23,30 +22,30 @@
             font-family: 'Tajawal', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fcfcfc;
-            color: var(--black);
+            background-color: var(--bg-light);
+            color: var(--brand-blue);
             line-height: 1.8;
         }
 
-        /* الهيدر بخلفية داكنة لتناسب فخامة الشعار */
         header {
-            background: var(--dark-gray);
-            padding: 60px 20px;
+            background-color: var(--brand-blue);
+            padding: 50px 20px;
             text-align: center;
-            border-bottom: 3px solid var(--gold);
+            border-bottom: 4px solid var(--brand-cyan);
         }
 
-        .logo {
-            max-width: 300px; /* مقاس مناسب لبروز تفاصيل الشعار */
+        .logo-main {
+            max-width: 280px;
             height: auto;
-            margin-bottom: 10px;
+            display: block;
+            margin: 0 auto;
         }
 
         header p {
-            color: var(--gold);
+            color: var(--brand-cyan);
             font-size: 1.1rem;
-            margin-top: 10px;
-            letter-spacing: 1px;
+            margin-top: 15px;
+            font-weight: 500;
         }
 
         .container {
@@ -55,34 +54,55 @@
             padding: 40px 20px;
         }
 
-        /* قسم من نحن */
         .section-box {
             background: var(--white);
-            padding: 40px;
-            border: 1px solid #eee;
+            padding: 35px;
+            border-radius: 12px;
             margin-bottom: 30px;
             text-align: right;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 15px rgba(10, 14, 69, 0.05);
         }
 
         .section-box h2 {
-            color: var(--black);
-            border-right: 5px solid var(--gold);
+            color: var(--brand-blue);
+            border-right: 6px solid var(--brand-cyan);
             padding-right: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
-        /* سياسة الحجز */
+        /* تنسيق قسم الشعارات */
+        .logos-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 20px 0;
+        }
+
+        .partner-logo {
+            max-width: 130px;
+            max-height: 80px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: 0.4s ease;
+            object-fit: contain;
+        }
+
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
         .policy-box {
-            background: #fff9f2; /* خلفية كريمية خفيفة */
+            background: #eefcfe;
             padding: 25px;
-            border: 1px solid #ffe8cc;
-            border-right: 5px solid var(--gold);
+            border: 1px solid #b2f2f9;
+            border-right: 6px solid var(--brand-cyan);
             margin-bottom: 30px;
             text-align: right;
-            font-size: 0.95rem;
-            border-radius: 4px;
+            border-radius: 8px;
         }
 
         .lang-en {
@@ -90,47 +110,42 @@
             text-align: left;
             display: block;
             margin-top: 5px;
-            color: #777;
+            color: #5c6c7b;
             font-family: sans-serif;
             font-size: 0.85rem;
         }
 
-        /* إطار التقويم */
         .booking-container {
-            border: 1px solid #eee;
             background: var(--white);
-            min-height: 800px;
-            margin-bottom: 50px;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 50px;
         }
 
-        /* الفوتر */
         footer {
-            background: var(--dark-gray);
-            padding: 60px 20px;
-            color: #ccc;
+            background: var(--brand-blue);
+            padding: 50px 20px;
+            color: var(--white);
             text-align: center;
         }
 
         footer a {
-            color: var(--gold);
+            color: var(--brand-cyan);
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
         }
 
-        .copyright {
-            font-size: 0.85rem;
-            margin-top: 25px;
-            color: #666;
+        @media (max-width: 600px) {
+            .partner-logo { max-width: 90px; }
+            .logos-flex { gap: 20px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="logo.png" alt="Ratio Consulting" class="logo">
+        <img src="logo.png" alt="RETIO Consulting" class="logo-main">
         <p>مستشارون سعوديون خبرة في مؤشرات السوق المحلي والدولي</p>
     </header>
 
@@ -138,15 +153,28 @@
         
         <section class="section-box">
             <h2>عن ريشيو (Ratio)</h2>
-            <p>نحن شريككم الاستراتيجي لتطوير الأعمال، نعتمد على تحليلات دقيقة لمؤشرات الأسواق لتقديم استشارات إدارية وتسويقية تضمن لعملائنا تحقيق الريادة والنمو المستدام في بيئة تنافسية متغيرة.</p>
+            <p>نحن شريككم الاستراتيجي لتطوير الأعمال، نعتمد على تحليلات دقيقة لمؤشرات الأسواق لتقديم استشارات إدارية وتسويقية تضمن لعملائنا تحقيق الريادة والنمو المستدام.</p>
+        </section>
+
+        <section class="section-box">
+            <h2>شركاء النجاح والداعمين</h2>
+            <div class="logos-flex">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/18374776774767497317_0" alt="جامعة الأميرة نورة" class="partner-logo">
+                <img src="
+
+http://googleusercontent.com/image_collection/image_retrieval/17972938501011786078_0
+" alt="جامعة الملك سعود" class="partner-logo">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/10009222899126927777_0" alt="منشآت" class="partner-logo">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/12773364202770246367_0" alt="رؤية 2030" class="partner-logo">
+            </div>
         </section>
 
         <div class="policy-box">
             <h3>سياسة الحجز والدفع | Booking Policy</h3>
-            <strong>• الرسوم:</strong> تختلف رسوم الاستشارة بناءً على نوع الجلسة المختار (الرسوم غير مستردة).
+            <strong>• الرسوم:</strong> تختلف الرسوم بناءً على نوع الجلسة المختار (الرسوم غير مستردة).
             <span class="lang-en">• Fees vary by session type (Non-refundable).</span>
             <br>
-            <strong>• إعادة الجدولة:</strong> يمكن تغيير موعد الجلسة قبل 24 ساعة من الموعد المحدد.
+            <strong>• إعادة الجدولة:</strong> يمكن تغيير موعد الجلسة قبل 24 ساعة.
             <span class="lang-en">• Rescheduling: Available up to 24 hours in advance.</span>
         </div>
 
@@ -160,11 +188,9 @@
     </div>
 
     <footer>
-        <p>للتواصل والاستفسارات الإدارية:</p>
+        <p>للتواصل والاستفسارات:</p>
         <a href="mailto:admin@highcharter.com">admin@highcharter.com</a>
-        <div class="copyright">
-            <p>&copy; 2025 ريشيو للاستشارات الإدارية والتسويقية وحلول الأعمال. جميع الحقوق محفوظة.</p>
-        </div>
+        <p style="font-size: 0.8rem; margin-top: 25px; opacity: 0.6;">&copy; 2025 ريشيو للاستشارات الإدارية والتسويقية. جميع الحقوق محفوظة.</p>
     </footer>
 
 </body>
