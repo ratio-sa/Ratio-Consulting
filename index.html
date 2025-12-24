@@ -12,8 +12,10 @@
         :root {
             --brand-blue: #0a0e45; 
             --brand-cyan: #4ce9ff; 
+            --deep-blue: #060a33;
             --white: #ffffff;
-            --bg-light: #f4f7f9;
+            --soft-gray: #f8fafc;
+            --text-main: #1e293b;
         }
 
         * { box-sizing: border-box; }
@@ -22,123 +24,161 @@
             font-family: 'Tajawal', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--bg-light);
-            color: var(--brand-blue);
-            line-height: 1.8;
+            background-color: var(--soft-gray);
+            color: var(--text-main);
+            line-height: 1.6;
         }
 
+        /* هيدر عصري مع تدرج لوني */
         header {
-            background-color: var(--brand-blue);
-            padding: 50px 20px;
+            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--brand-blue) 100%);
+            padding: 80px 20px;
             text-align: center;
-            border-bottom: 4px solid var(--brand-cyan);
+            border-bottom: 5px solid var(--brand-cyan);
+            position: relative;
+            overflow: hidden;
         }
 
         .logo-main {
-            max-width: 280px;
+            max-width: 320px;
             height: auto;
-            display: block;
-            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
         }
+        
+        .logo-main:hover { transform: scale(1.02); }
 
         header p {
             color: var(--brand-cyan);
-            font-size: 1.1rem;
-            margin-top: 15px;
+            font-size: 1.3rem;
+            margin-top: 20px;
             font-weight: 500;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            max-width: 1100px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 3;
         }
 
-        .section-box {
+        /* بطاقات التصميم */
+        .card {
             background: var(--white);
-            padding: 35px;
-            border-radius: 12px;
+            padding: 40px;
+            border-radius: 20px;
             margin-bottom: 30px;
             text-align: right;
-            box-shadow: 0 4px 15px rgba(10, 14, 69, 0.05);
+            box-shadow: 0 10px 25px rgba(10, 14, 69, 0.08);
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        .section-box h2 {
+        h2 {
             color: var(--brand-blue);
-            border-right: 6px solid var(--brand-cyan);
-            padding-right: 15px;
+            font-size: 1.8rem;
             margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
-        /* تنسيق قسم الشعارات */
-        .logos-flex {
+        h2::after {
+            content: "";
+            flex-grow: 1;
+            height: 2px;
+            background: linear-gradient(to left, var(--brand-cyan), transparent);
+        }
+
+        /* قسم الشعارات */
+        .logos-wrapper {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 40px;
+            gap: 50px;
             padding: 20px 0;
         }
 
         .partner-logo {
-            max-width: 130px;
-            max-height: 80px;
-            filter: grayscale(100%);
-            opacity: 0.7;
-            transition: 0.4s ease;
+            max-width: 150px;
+            max-height: 85px;
             object-fit: contain;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));
         }
 
         .partner-logo:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-            transform: scale(1.1);
+            transform: translateY(-10px);
         }
 
-        .policy-box {
-            background: #eefcfe;
-            padding: 25px;
-            border: 1px solid #b2f2f9;
-            border-right: 6px solid var(--brand-cyan);
-            margin-bottom: 30px;
-            text-align: right;
-            border-radius: 8px;
+        /* سياسة الحجز */
+        .policy-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            background: #f0fdff;
+            padding: 30px;
+            border-radius: 15px;
+            border-right: 8px solid var(--brand-cyan);
         }
 
-        .lang-en {
-            direction: ltr;
-            text-align: left;
-            display: block;
-            margin-top: 5px;
-            color: #5c6c7b;
-            font-family: sans-serif;
-            font-size: 0.85rem;
-        }
+        .policy-item h4 { margin: 0 0 10px; color: var(--brand-blue); }
+        .policy-item p { margin: 0; font-size: 0.95rem; color: #475569; }
 
-        .booking-container {
-            background: var(--white);
-            border-radius: 12px;
+        /* حاوية Calendly */
+        .booking-card {
+            padding: 10px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            margin-bottom: 50px;
         }
 
+        /* فوتر فخم */
         footer {
-            background: var(--brand-blue);
-            padding: 50px 20px;
-            color: var(--white);
+            background: var(--deep-blue);
+            padding: 80px 20px 40px;
+            color: #f1f5f9;
             text-align: center;
         }
 
-        footer a {
-            color: var(--brand-cyan);
+        .footer-content { max-width: 600px; margin: 0 auto; }
+        
+        .footer-btn {
+            display: inline-block;
+            background: var(--brand-cyan);
+            color: var(--brand-blue);
+            padding: 12px 35px;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 800;
+            margin: 20px 0;
+            transition: 0.3s;
         }
 
-        @media (max-width: 600px) {
-            .partner-logo { max-width: 90px; }
-            .logos-flex { gap: 20px; }
+        .footer-btn:hover {
+            background: var(--white);
+            transform: scale(1.05);
+        }
+
+        .copyright {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        /* تحسينات الجوال */
+        @media (max-width: 768px) {
+            .policy-container { grid-template-columns: 1fr; }
+            header { padding: 60px 20px; }
+            .logo-main { max-width: 220px; }
+            .container { margin-top: -20px; }
+            .partner-logo { max-width: 110px; }
         }
     </style>
 </head>
@@ -146,39 +186,41 @@
 
     <header>
         <img src="logo.png" alt="RETIO Consulting" class="logo-main">
-        <p>مستشارون سعوديون خبرة في مؤشرات السوق المحلي والدولي</p>
+        <p>الريادة في استشارات مؤشرات الأسواق</p>
     </header>
 
     <div class="container">
         
-        <section class="section-box">
-            <h2>عن ريشيو (Ratio)</h2>
-            <p>نحن شريككم الاستراتيجي لتطوير الأعمال، نعتمد على تحليلات دقيقة لمؤشرات الأسواق لتقديم استشارات إدارية وتسويقية تضمن لعملائنا تحقيق الريادة والنمو المستدام.</p>
+        <section class="card">
+            <h2>من نحن</h2>
+            <p style="font-size: 1.15rem; color: #334155;">نحن في <strong>ريشيو (Ratio)</strong> نُعيد صياغة مستقبل الأعمال من خلال رؤية سعودية متخصصة. نرتكز على تحليلات دقيقة وبيانات عميقة لمؤشرات الأسواق المحلية والدولية، لتمكين شركائنا من اتخاذ قرارات استراتيجية تحقق النمو المستدام.</p>
         </section>
 
-        <section class="section-box">
+        <section class="card">
             <h2>شركاء النجاح والداعمين</h2>
-            <div class="logos-flex">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/18374776774767497317_0" alt="جامعة الأميرة نورة" class="partner-logo">
-                <img src="
-
-http://googleusercontent.com/image_collection/image_retrieval/17972938501011786078_0
-" alt="جامعة الملك سعود" class="partner-logo">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/10009222899126927777_0" alt="منشآت" class="partner-logo">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/12773364202770246367_0" alt="رؤية 2030" class="partner-logo">
+            <div class="logos-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/ar/thumb/a/ae/Princess_Nora_bint_Abdul_Rahman_University_logo.png/250px-Princess_Nora_bint_Abdul_Rahman_University_logo.png" alt="جامعة الأميرة نورة" class="partner-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/ar/thumb/0/00/King_Saud_University_logo.png/250px-King_Saud_University_logo.png" alt="جامعة الملك سعود" class="partner-logo">
+                <img src="https://www.monshaat.gov.sa/sites/default/files/2021-06/logo.png" alt="منشآت" class="partner-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/ar/thumb/a/a2/Saudi_Vision_2030_logo.svg/250px-Saudi_Vision_2030_logo.svg.png" alt="رؤية 2030" class="partner-logo">
             </div>
         </section>
 
-        <div class="policy-box">
-            <h3>سياسة الحجز والدفع | Booking Policy</h3>
-            <strong>• الرسوم:</strong> تختلف الرسوم بناءً على نوع الجلسة المختار (الرسوم غير مستردة).
-            <span class="lang-en">• Fees vary by session type (Non-refundable).</span>
-            <br>
-            <strong>• إعادة الجدولة:</strong> يمكن تغيير موعد الجلسة قبل 24 ساعة.
-            <span class="lang-en">• Rescheduling: Available up to 24 hours in advance.</span>
-        </div>
+        <section class="card">
+            <h2>سياسة الجلسات والاستشارات</h2>
+            <div class="policy-container">
+                <div class="policy-item">
+                    <h4>رسوم الخدمة</h4>
+                    <p>يتم احتساب الرسوم بناءً على نوع الاستشارة المختارة وهي غير مستردة.</p>
+                </div>
+                <div class="policy-item">
+                    <h4>المرونة في المواعيد</h4>
+                    <p>يمكنكم إعادة جدولة الموعد قبل 24 ساعة من الوقت المحدد للجلسة.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="booking-container">
+        <div class="booking-card">
             <div class="calendly-inline-widget" 
                  data-url="https://calendly.com/admin-highcharter?hide_landing_page_details=1&hide_gdpr_banner=1" 
                  style="min-width:320px;height:750px;">
@@ -188,9 +230,16 @@ http://googleusercontent.com/image_collection/image_retrieval/179729385010117860
     </div>
 
     <footer>
-        <p>للتواصل والاستفسارات:</p>
-        <a href="mailto:admin@highcharter.com">admin@highcharter.com</a>
-        <p style="font-size: 0.8rem; margin-top: 25px; opacity: 0.6;">&copy; 2025 ريشيو للاستشارات الإدارية والتسويقية. جميع الحقوق محفوظة.</p>
+        <div class="footer-content">
+            <h3>جاهز لبدء رحلة التغيير؟</h3>
+            <p>تواصل معنا مباشرة للاستفسارات الكبرى أو الشراكات الاستراتيجية</p>
+            <a href="mailto:admin@highcharter.com" class="footer-btn">راسلنا الآن</a>
+            <br>
+            <span>admin@highcharter.com</span>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 ريشيو للاستشارات الإدارية والتسويقية (RETIO). جميع الحقوق محفوظة.</p>
+        </div>
     </footer>
 
 </body>
