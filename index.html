@@ -4,58 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ريشيو للاستشارات | Ratio Consulting</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     
     <style>
-        body { font-family: 'Tajawal', sans-serif; margin: 0; background-color: #fdfdfd; color: #1a1a1a; line-height: 1.8; text-align: center; }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        header { padding: 40px; background: #fff; border-bottom: 1px solid #eee; }
-        .logo { max-width: 220px; height: auto; }
-        .section-box { background: #fff; padding: 30px; margin: 20px 0; border: 1px solid #eee; text-align: right; }
-        
-        .policy-container { 
-            background: #f9f9f9; 
-            padding: 20px; 
-            border-right: 4px solid #d4a373; 
-            margin: 30px 0; 
-            text-align: right;
-            font-size: 0.9rem;
+        :root {
+            --gold: #d4a373;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --gray: #f9f9f9;
         }
-        
-        .booking-frame { margin: 40px 0; border: 1px solid #1a1a1a; }
-        
-        footer { padding: 40px; font-size: 0.8rem; color: #888; border-top: 1px solid #eee; }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfdfd;
+            color: var(--black);
+            line-height: 1.8;
+        }
+
+        header {
+            background: var(--white);
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            max-width: 240px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-box {
+            background: var(--white);
+            padding: 40px;
+            border: 1px solid #eee;
+            margin-bottom: 40px;
+            text-align: right;
+        }
+
+        .section-box h2 {
+            color: var(--black);
+            border-right: 5px solid var(--gold);
+            padding-right: 15px;
+            margin-bottom: 20px;
+        }
+
+        .policy-box {
+            background: var(--gray);
+            padding: 25px;
+            border-right: 5px solid var(--gold);
+            margin-bottom: 30px;
+            text-align: right;
+            font-size: 0.95rem;
+        }
+
+        .lang-en {
+            direction: ltr;
+            text-align: left;
+            display: block;
+            margin-top: 5px;
+            color: #666;
+            font-family: sans-serif;
+            font-size: 0.85rem;
+        }
+
+        .booking-container {
+            border: 1px solid var(--black);
+            background: var(--white);
+            min-height: 800px;
+            margin-bottom: 50px;
+        }
+
+        footer {
+            background: var(--white);
+            padding: 60px 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="logo.png" alt="Ratio Logo" class="logo">
-        <p>مستشارون سعوديون خبرة في مؤشرات السوق المحلي والدولي</p>
+        <img src="logo.png" alt="Ratio Consulting - ريشيو للاستشارات" class="logo">
+        <p class="tagline">مستشارون سعوديون خبرة في مؤشرات السوق المحلي والدولي</p>
     </header>
 
     <div class="container">
+        
         <section class="section-box">
             <h2>من نحن</h2>
-            <p>نحن في <strong>ريشيو (Ratio)</strong> نقدم حلولاً استشارية مبنية على تحليل دقيق لمؤشرات السوق، لتمكين قطاع الأعمال من تحقيق النمو المستدام.</p>
+            <p>نحن في <strong>ريشيو (Ratio)</strong> نرتكز على خبرات سعودية عميقة في تحليل مؤشرات السوقين المحلي والدولي لتقديم حلول أعمال استراتيجية تضمن لعملائنا الريادة والنمو.</p>
         </section>
 
-        <div class="policy-container">
+        <div class="policy-box">
             <h3>سياسة الحجز والدفع | Booking Policy</h3>
-            <p>• رسوم التأكيد: <strong>50 ريال</strong> غير مستردة. / Confirmation Fee: <strong>SAR 50</strong> (Non-refundable).</p>
-            <p>• إعادة الجدولة: قبل 24 ساعة. / Rescheduling: 24 hours in advance.</p>
+            
+            <strong>• رسوم التأكيد:</strong> يتم تحديد رسوم الاستشارة بناءً على نوع الجلسة المختار (غير مستردة).
+            <span class="lang-en">• Confirmation Fee: Fees vary by session type (Non-refundable).</span>
+            
+            <br>
+            <strong>• إعادة الجدولة:</strong> يمكن تغيير الموعد قبل 24 ساعة من الوقت المحدد.
+            <span class="lang-en">• Rescheduling: Available up to 24 hours in advance.</span>
         </div>
 
-        <section class="booking-frame">
-            <div class="calendly-inline-widget" data-url="https://calendly.com/admin-highcharter/new-meeting?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:750px;"></div>
-        </section>
+        <div class="booking-container">
+            <div class="calendly-inline-widget" 
+                 data-url="https://calendly.com/admin-highcharter/clone?hide_landing_page_details=1&hide_gdpr_banner=1" 
+                 style="min-width:320px;height:750px;">
+            </div>
+        </div>
+
     </div>
 
     <footer>
-        <p>للتواصل: admin@highcharter.com</p>
-        <p>&copy; 2025 ريشيو للاستشارات الإدارية والتسويقية. جميع الحقوق محفوظة.</p>
+        <div class="contact-info">
+            <p>للتواصل والاستفسارات:</p>
+            <a href="mailto:admin@highcharter.com">admin@highcharter.com</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 ريشيو للاستشارات الإدارية والتسويقية وحلول الأعمال. جميع الحقوق محفوظة.</p>
+        </div>
     </footer>
 
 </body>
